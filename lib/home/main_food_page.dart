@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodie/home/food_page_body.dart';
 import 'package:foodie/utils/colors.dart';
 import 'package:foodie/widgets/small_text.dart';
 import '../widgets/big_text.dart';
@@ -14,6 +15,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade200,
       body: Column(
         children: [
           Container(
@@ -30,7 +32,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                       color: AppColors.Locate,
                       ),
 
-                      SmallText(text: "Ranipet", color: Colors.black54)
+                      SmallText(text: "Ranipet", color: AppColors.iconColor2)
                     ],
                   ),
                   Container(
@@ -40,7 +42,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                     child: IconButton(
                       onPressed: (){}, 
                       icon: Icon(Icons.search,
-                      color: Colors.black),
+                      color: Colors.white),
                       ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
@@ -52,6 +54,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
               ),
             ),
           ),
+          FoodPageBody(),
         ],
       )
     );
