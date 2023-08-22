@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class BigText extends StatelessWidget {
-  Color color;
+  final Color color;
   final String text;
-  double size;
-  TextOverflow overflow;
+  final double size;
+  final TextOverflow overflow;
 
-  BigText({Key? key,this.color = const Color(0xff332d2b),
+  const BigText({Key? key,this.color = const Color(0xff332d2b),
     required this.text,
     this.size=22,
     this.overflow=TextOverflow.ellipsis
